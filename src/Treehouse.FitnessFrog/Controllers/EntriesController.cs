@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Web;
 using System.Web.Mvc;
 using Treehouse.FitnessFrog.Data;
@@ -52,7 +53,7 @@ namespace Treehouse.FitnessFrog.Controllers
             if (ModelState.IsValid)
             {
                 _entriesRepository.AddEntry(entry);
-                //TODO 
+                return RedirectToAction("Index");
             }
             return View(entry);
         }
