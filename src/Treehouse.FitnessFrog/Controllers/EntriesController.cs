@@ -44,15 +44,18 @@ namespace Treehouse.FitnessFrog.Controllers
             var entry = new Entry()
             {
                 Date = DateTime.Today
+                
             };
             return View();
         }
+
         [HttpPost]
         public ActionResult Add(Entry entry)
         {
             if (ModelState.IsValid)
             {
                 _entriesRepository.AddEntry(entry);
+                entry.ActivityId = 2;
                 return RedirectToAction("Index");
             }
             return View(entry);
