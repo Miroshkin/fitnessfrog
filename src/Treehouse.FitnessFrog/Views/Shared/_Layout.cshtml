@@ -26,6 +26,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Secular+One" rel="stylesheet">
     <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    @*<link href="~/Content.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css"/>*@
+    <link href="~/Content/site.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -61,6 +64,12 @@
     </div>
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap-datepicker.min.js"></script>
+<script>
+    $('input.datepicker').datepicker({
+        format: 'm/d/yyyy'
+    });
+</script>
 </body>
 </html>
